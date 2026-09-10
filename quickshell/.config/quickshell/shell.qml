@@ -1,5 +1,7 @@
 import QtQuick
 import Quickshell
+import "Bar" // this is where the Bar logic should be held
+
 
 PanelWindow {
     anchors {
@@ -14,12 +16,31 @@ PanelWindow {
         anchors.fill: parent
         color: "#1e1e2e"
 
-        Text {
-            anchors.centerIn: parent
+        Item {
+            anchors.fill: parent
+            anchors.leftMargin: 12
+            anchors.rightMargin: 12
 
-            text: "John's Quickshell"
-            color: "#ffffff"
-            font.pixelSize: 14
+            //Left Side
+            Workspaces {
+                anchors.left: parent.left
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            Text {
+                anchors.centerIn: parent
+
+                text: "Center"
+                color: "#ffffff"
+            }
+
+            Text {
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+
+                text: "Right"
+                color: "#ffffff"
+            }
         }
     }
 }
