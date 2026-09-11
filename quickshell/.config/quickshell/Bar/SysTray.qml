@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Services.SystemTray
-import Quickshell
 
 RowLayout{
     property var window
