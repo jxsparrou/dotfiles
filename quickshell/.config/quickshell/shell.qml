@@ -2,7 +2,7 @@
 
 import QtQuick
 import Quickshell
-import "Bar" // this is where the Bar logic should be held
+import "Bar" // this is where the Bar logic should be held. it is a directory
 
 ShellRoot{
     Variants {
@@ -31,7 +31,7 @@ ShellRoot{
                     anchors.leftMargin: 12
                     anchors.rightMargin: 12
 
-                    //Left Side
+                    //Left Side -
                     Workspaces {
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter

@@ -1,3 +1,28 @@
+# Dotfile Configuration and Experiments
+
+These are my personal dotfiles. Its currently using stow to back store everything in ~/dotfiles/
+which is why it is looking a bit odd. 
+
+All of the hyprland stuff is currently based around a CachyOS-hypr-noctalia setup.
+CachyOS as the base distro, with hyprland as the window manager, and noctalia 
+as the desktop shell.
+
+Hypr is my personal lua files for my hyprland installation. Its 
+
+The directories map out to ~/.config/hypr for the hyprland config and
+~/.config/quickshell . Which kinda makes sense if you know that I am using stow
+to back them up in conjunction with git. 
+
+The quickshell directory is an in-development quickshell shell for my own usecase. We'll see 
+how far it ends up going. 
+
+
+Below is what the AI generated for me as the README. I will probably adopt it for use above as I
+see fit and have GIPPITY update it itself. 
+
+
+--- CHAT GIPPITY GENERATED BELOW THIS LINE ---
+
 # Quickshell Configuration
 
 A work-in-progress custom desktop shell for **CachyOS + Hyprland**,
