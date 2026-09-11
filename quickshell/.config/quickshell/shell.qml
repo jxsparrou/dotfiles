@@ -50,6 +50,10 @@ ShellRoot{
                         anchors.verticalCenter: parent.verticalCenter
                         spacing: 8
 
+                        Network {
+                            anchors.verticalCenter: parent.verticalCenter
+                        }
+
                         Volume {
                             anchors.verticalCenter: parent.verticalCenter
                         }
