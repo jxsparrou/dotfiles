@@ -4,44 +4,52 @@ import QtQuick
 import Quickshell
 import "Bar" // this is where the Bar logic should be held
 
+ShellRoot{
+    Variants {
+        model: Quickshell.screens
 
-PanelWindow {
-    id: barWindow
+        PanelWindow {
+            required property var modelData
 
-    anchors {
-        top: true
-        left: true
-        right: true
-    }
+            id: barWindow
+            screen: modelData
 
-    implicitHeight: 36
-
-    Rectangle {
-        anchors.fill: parent
-        color: "#1e1e2e"
-
-        Item {
-            anchors.fill: parent
-            anchors.leftMargin: 12
-            anchors.rightMargin: 12
-
-            //Left Side
-            Workspaces {
-                anchors.left: parent.left
-                anchors.verticalCenter: parent.verticalCenter
+            anchors {
+                top: true
+                left: true
+                right: true
             }
 
-            // Center
-            Clock {
-                anchors.centerIn: parent
-            }
+            implicitHeight: 36
 
-            // Right Side
-            SysTray {
-                anchors.right: parent.right
-                anchors.verticalCenter: parent.verticalCenter
+            Rectangle {
+                anchors.fill: parent
+                color: "#1e1e2e"
 
-                window: barWindow
+                Item {
+                    anchors.fill: parent
+                    anchors.leftMargin: 12
+                    anchors.rightMargin: 12
+
+                    //Left Side
+                    Workspaces {
+                        anchors.left: parent.left
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    // Center
+                    Clock {
+                        anchors.centerIn: parent
+                    }
+
+                    // Right Side
+                    SysTray {
+                        anchors.right: parent.right
+                        anchors.verticalCenter: parent.verticalCenter
+
+                        window: barWindow
+                    }
+                }
             }
         }
     }
