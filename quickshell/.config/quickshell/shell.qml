@@ -27,13 +27,12 @@ PanelWindow {
                 anchors.verticalCenter: parent.verticalCenter
             }
 
-            Text {
+            // Center
+            Clock {
                 anchors.centerIn: parent
-
-                text: "Center"
-                color: "#ffffff"
             }
 
+            // Right Side
             Text {
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
