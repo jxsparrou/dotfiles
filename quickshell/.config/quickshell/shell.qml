@@ -1,9 +1,13 @@
+//@ pragma UseQApplication
+
 import QtQuick
 import Quickshell
 import "Bar" // this is where the Bar logic should be held
 
 
 PanelWindow {
+    id: barWindow
+
     anchors {
         top: true
         left: true
@@ -33,12 +37,11 @@ PanelWindow {
             }
 
             // Right Side
-            Text {
+            SysTray {
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
 
-                text: "Right"
-                color: "#ffffff"
+                window: barWindow
             }
         }
     }
