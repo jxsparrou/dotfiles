@@ -7,7 +7,7 @@ All of the hyprland stuff is currently based around a CachyOS-hypr-noctalia setu
 CachyOS as the base distro, with hyprland as the window manager, and noctalia 
 as the desktop shell.
 
-Hypr is my personal lua files for my hyprland installation. Its 
+Hypr is my personal lua files for my hyprland installation.
 
 The directories map out to ~/.config/hypr for the hyprland config and
 ~/.config/quickshell . Which kinda makes sense if you know that I am using stow
