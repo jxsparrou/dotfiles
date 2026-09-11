@@ -3,10 +3,13 @@ import QtQuick.Layouts
 import Quickshell.Hyprland
 
 RowLayout {
-    spacing: 6
+    property var screen
+    property var hyprMonitor: Hyprland.monitorFor(screen)
 
     Repeater {
-        model: Hyprland.workspaces
+        model: Hyprland.workspaces.values.filter(
+            workspace => workspace.monitor === hyprMonitor
+        )
 
         delegate: Rectangle {
             required property var modelData

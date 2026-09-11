@@ -35,6 +35,8 @@ ShellRoot{
                     Workspaces {
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
+
+                        screen: barWindow.screen
                     }
 
                     // Center
@@ -43,11 +45,19 @@ ShellRoot{
                     }
 
                     // Right Side
-                    SysTray {
+                    Row {
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
+                        spacing: 8
 
-                        window: barWindow
+                        Volume {
+                            anchors.verticalCenter: parent.verticalCenter
+                        }
+
+                        SysTray {
+                            anchors.verticalCenter: parent.verticalCenter
+                            window: barWindow
+                        }
                     }
                 }
             }
